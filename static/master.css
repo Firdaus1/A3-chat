@@ -1,0 +1,53 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-size: 14pt;
+}
+
+body {
+  background-color: #EEE;
+  padding: 0;
+}
+
+main {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 1ex;
+  background-color: #FFF;
+}
+
+/* user profile pages */
+.user-profile .avatar {
+  float: left;
+  display: block;
+  margin-right: 1ex;
+}
+
+/* timeline page */
+.timeline .message .avatar {
+  float: left;
+  padding-right: 1ex;
+}
+.timeline .message h2 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.timeline .message .timestamp {
+  display: inline;
+  text-align: right;
+}
+.timeline .message .hai {
+  text-align: right;
+}
+.timeline .message {
+  clear: left;
+  padding: 1ex 1ex;
+}
+/* reign in the image size */
+.timeline .message .photo {
+  max-width: 100%;
+  display: block;
+}
+.name{
+  float: right;
+}

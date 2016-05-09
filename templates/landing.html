@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Welcome to ChatRoom!</h1>
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+  <div class="pure-g">
+    <form method="POST" action="/login" class="pure-form pure-form-stacked pure-u-1 pure-u-md-1-2">
+      <input type="hidden" name="url" value="{{ request.args.url }}">
+      <label for="login-email">Email</label>
+      <input type="text" name="email" id="login-email">
+      <label for="login-password">Password</label>
+      <input type="password" name="password" id="login-password">
+      <button type="submit" class="pure-button pure-button-primary">Log In</button>
+    </form>
+    <form method="POST" action="/create_user" class="pure-form pure-form-stacked pure-u-1 pure-u-md-1-2">
+      <input type="hidden" name="url" value="{{ request.args.url }}">
+      <label for="create-email">Email</label>
+      <input type="text" name="email" id="create-email" maxlength="20">
+      <label for="create-name">Name</label>
+      <input type="text" name="name" id="create-name" maxlength="20">
+      <label for="create-password">Password</label>
+      <input type="password" name="password" id="create-password">
+      <label for="create-confirm">Confirm Password</label>
+      <input type="password" name="confirm" id="create-confirm">
+      <button type="submit" class="pure-button">Create Account</button>
+    </form>
+  </div>
+{% endblock %}

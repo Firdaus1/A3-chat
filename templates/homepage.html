@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Hi, {{ g.user.name }}!</h1>
+
+    {% if check == 0 %}
+    <em>Roomname already exits, please choose another one</em>
+    {% endif %}
+    <form method="POST" action="/index" class="pure-form pure-form-stacked pure-u-1 pure-u-md-1-2">
+    <label for="roomCreate">Room name</label>
+    <input type="text" name="roomCreate" id = "roomAssign">
+    <button type="submit" class = "pure-button pure-button-primary">Create</button>
+    </form>
+
+    <br><br>
+    <form method="POST" action="/joinRoom" class="pure-form pure-form-stacked pure-u-1 pure-u-md-1-2">
+    <label for="roomAssign">To join a room, please enter the provided room name</label>
+    <input type="text" name="roomAssign" id = "roomAssign">
+<button type="submit" class = "pure-button pure-button-primary">Join</button>
+</form>
+
+ <br><br>
+<a href="/logout"> <button class="pure-button pure-button primary">Lougout</button></a>
+
+  {# Load the JavaScript for the reply timeline #}
+{% endblock %}
